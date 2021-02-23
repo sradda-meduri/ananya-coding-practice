@@ -10,7 +10,7 @@ public class RemoveElement {
         int a=remove1(nums,var);
         System.out.println("The length of the array "+a);
         System.out.println("The array is displayed as ");
-        System.out.println("[ ");
+        System.out.print("[ ");
         for(int i=0;i<nums.length;i++)
         {
             System.out.print(nums[i]+" ");
