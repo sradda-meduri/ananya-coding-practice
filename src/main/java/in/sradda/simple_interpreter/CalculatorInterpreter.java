@@ -12,6 +12,7 @@ public class CalculatorInterpreter {
         while (true) {
             System.out.print("\n\nEnter -1 to escape : $>");
             String input = scanner.nextLine();
+            input=input.replaceAll(" ","");
 
             if (input.equalsIgnoreCase("-1")) {
                 break;
