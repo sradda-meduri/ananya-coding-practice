@@ -4,13 +4,11 @@ public class TwoSum {
     public static void main(String[] args) {
         TwoSum twosum=new TwoSum();
         int[] nums = new int[] {1,4,5,11};
-        int target=9;
+        int target=16;
         int[] a=sum1(nums,target);
         for(int m=0;m<a.length;m++){
             System.out.println(a[m]+"");
         }
-
-
     }
     public static int[] sum1(int[] nums,int target)
     {
@@ -24,4 +22,5 @@ public class TwoSum {
         throw new IllegalArgumentException("No 2 sum sol");
     }
 }
+
 
