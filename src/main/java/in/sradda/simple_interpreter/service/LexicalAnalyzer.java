@@ -1,8 +1,8 @@
 package in.sradda.simple_interpreter.service;
 import in.sradda.simple_interpreter.model.Token;
 import in.sradda.simple_interpreter.model.TokenType;
-
 public class LexicalAnalyzer {
+
     private String input;
     private int currentIndex = 0;
 
@@ -32,3 +32,6 @@ public class LexicalAnalyzer {
         return currentToken;
     }
 }
+
+
+
