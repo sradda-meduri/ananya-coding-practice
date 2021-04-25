@@ -53,7 +53,16 @@ public class LexicalAnalyzerV2 {
                         currentToken = new Token(finalTokenValue + currentChar + "", TokenType.MINUS);
                         shouldRunLoop = false;
                         break;
-                    }else if (currentChar == ' ') {
+                    }else if(currentChar == '*') {
+                        currentToken = new Token(finalTokenValue + currentChar + "", TokenType.MULTIPLICATION);
+                        shouldRunLoop = false;
+                        break;
+                    }else if(currentChar == '/'){
+                        currentToken = new Token(finalTokenValue + currentChar + "", TokenType.DIVISION);
+                        shouldRunLoop = false;
+                        break;
+                    }
+                    else if (currentChar == ' ') {
                         //ignore the character
                     } else {
                         throw new IllegalArgumentException("Allowed characters in the language are + , digits and space");
