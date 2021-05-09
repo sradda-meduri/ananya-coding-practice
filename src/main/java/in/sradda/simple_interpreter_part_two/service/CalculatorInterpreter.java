@@ -1,5 +1,6 @@
-package in.sradda.simple_interpreter_part_two;
-import in.sradda.simple_interpreter_part_two.service.Expr;
+package in.sradda.simple_interpreter_part_two.service;
+import in.sradda.simple_interpreter_part_two.service.service.Expr;
+
 import java.util.Scanner;
 
 public class CalculatorInterpreter {
