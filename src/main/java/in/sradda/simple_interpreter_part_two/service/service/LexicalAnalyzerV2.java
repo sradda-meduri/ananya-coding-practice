@@ -1,6 +1,6 @@
-package in.sradda.simple_interpreter_part_two.service;
-import in.sradda.simple_interpreter_part_two.model.Token;
-import in.sradda.simple_interpreter_part_two.model.TokenType;
+package in.sradda.simple_interpreter_part_two.service.service;
+import in.sradda.simple_interpreter_part_two.service.model.Token;
+import in.sradda.simple_interpreter_part_two.service.model.TokenType;
 
 public class LexicalAnalyzerV2 {
 

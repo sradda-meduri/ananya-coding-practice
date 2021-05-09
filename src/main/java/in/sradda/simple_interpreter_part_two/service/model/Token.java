@@ -1,4 +1,4 @@
-package in.sradda.simple_interpreter_part_two.model;
+package in.sradda.simple_interpreter_part_two.service.model;
 
 public class Token {
     private String value;
