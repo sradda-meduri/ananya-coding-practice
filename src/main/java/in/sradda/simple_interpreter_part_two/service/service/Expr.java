@@ -52,7 +52,10 @@ public class Expr {
     public int evaluate(String input) {
         Token[] tokens = new Token[3];
         if(input == null){
-            throw new IllegalArgumentException("Null value now allowed");
+            throw new IllegalArgumentException("Null value not allowed");
+        }
+        if(input == ""){
+            throw new IllegalArgumentException("Empty String not allowed");
         }
         /*
         structure of the language ->

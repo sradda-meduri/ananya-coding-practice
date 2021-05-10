@@ -60,8 +60,16 @@ public class ExprTest {
         Expr expr = new Expr();
         Throwable exception = Assertions.assertThrows(IllegalArgumentException.class,
                 () -> expr.evaluate(null));
-        Assertions.assertEquals("Null value now allowed", exception.getMessage());
+        Assertions.assertEquals("Null value not allowed", exception.getMessage());
 //        int result = expr.evaluate("100 / 0");
 //        Assertions.assertEquals(0,0);
+    }
+
+    @Test
+    public void testCasePassingEmptyString() {
+        Expr expr = new Expr();
+        Throwable exception = Assertions.assertThrows(IllegalArgumentException.class,
+                () -> expr.evaluate(""));
+        Assertions.assertEquals("Empty String not allowed", exception.getMessage());
     }
 }
