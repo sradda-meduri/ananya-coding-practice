@@ -20,6 +20,8 @@ public class BinaryToDecimal {
     public static void main(String args[])
     {
         // Start with the empty list /
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("enter length");
 
         ListNode head = newNode(1);
         head.next = newNode(0);
