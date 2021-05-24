@@ -25,14 +25,5 @@ class MatrixDiagonalSumTest {
         Assertions.assertEquals("Empty Matrix not allowed", exception.getMessage());
     }
 
-    @Test
-    public void testCasePassingNullAsArgument() {
-        MatrixDiagonalSum mat = new MatrixDiagonalSum();
-        int mat1[][] = null;
-        Throwable exception = Assertions.assertThrows(IllegalArgumentException.class,
-                () -> mat.diagonalSum(mat1));
-        Assertions.assertEquals("Null value not allowed", exception.getMessage());
 
-
-    }
 }

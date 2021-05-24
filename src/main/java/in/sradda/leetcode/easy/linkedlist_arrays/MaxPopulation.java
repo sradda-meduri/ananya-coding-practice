@@ -30,11 +30,10 @@ public class MaxPopulation {
 
     }
     public int maximumPopulation(int[][] logs) {
-        int mat[][] = {{}};
-        if (logs == mat){
+        if (logs[0].length==0){
             throw new IllegalArgumentException("Empty Matrices not allowed");
-
         }
+
         int i = 1950;
         int max_pop = Integer.MIN_VALUE;
         int[] year = new int[2100];

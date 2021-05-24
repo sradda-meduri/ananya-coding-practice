@@ -13,12 +13,12 @@ public class SumZero {
     public void inp(){
         Scanner sc = new Scanner(System.in);
         int num = sc.nextInt();
-        if(num==0){
-            throw new IllegalArgumentException("num cannot be equal to 0");
-        }
-        if(num<0){
-            throw new IllegalArgumentException("enter value greater than 0");
-        }
+//        if(num==0){
+//            throw new IllegalArgumentException("num cannot be equal to 0");
+//        }
+//        if(num<0){
+//            throw new IllegalArgumentException("enter value greater than 0");
+//        }
         int[] sol=new int[num];
         sol=sumZero(num);
         for(int i=0;i<num;i++){
@@ -26,6 +26,13 @@ public class SumZero {
         }
     }
     public int[] sumZero(int n) {
+        if(n==0){
+            throw new IllegalArgumentException("num cannot be equal to 0");
+        }
+        if(n<0){
+            throw new IllegalArgumentException("enter value greater than 0");
+        }
+
         if(n==1)
             return new int [] {0};
         int[] result = new int[n];

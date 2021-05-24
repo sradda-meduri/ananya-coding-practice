@@ -23,10 +23,7 @@ public class MatrixDiagonalSum {
         if(mat[0].length==0) {
             throw new IllegalArgumentException("Empty Matrix not allowed");
         }
-        if(mat==null)
-        {
-            throw new IllegalArgumentException("Null value not allowed");
-        }
+
 
         int sum=0;
         int len = mat.length-1;

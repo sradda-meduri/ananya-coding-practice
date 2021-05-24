@@ -27,8 +27,7 @@ public class CountNegativeNumbers {
         System.out.println(countNegatives(matrix));
     }
     public int countNegatives(int[][] grid) {
-        int mat[][] = {{}};
-        if (grid == mat){
+        if (grid[0].length == 0){
             throw new IllegalArgumentException("Empty Matrices not allowed");
 
         }

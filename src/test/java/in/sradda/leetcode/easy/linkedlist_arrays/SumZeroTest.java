@@ -20,7 +20,7 @@ class SumZeroTest {
         SumZero s= new SumZero();
         int n=0;
         Throwable exception = Assertions.assertThrows(IllegalArgumentException.class,
-                () -> s.sumZero(n));
+                () -> s.sumZero(0));
         Assertions.assertEquals("num cannot be equal to 0", exception.getMessage());
 
     }
@@ -30,7 +30,7 @@ class SumZeroTest {
         SumZero s= new SumZero();
         int n=-2;
         Throwable exception = Assertions.assertThrows(IllegalArgumentException.class,
-                () -> s.sumZero(n));
+                () -> s.sumZero(-2));
         Assertions.assertEquals("enter value greater than 0", exception.getMessage());
 
     }
