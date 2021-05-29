@@ -12,8 +12,8 @@ public class RunningSum {
         for (int i = 0; i < num; i++) {
             arr[i] = sc.nextInt();
         }
-        int[] a = r.runningSum(arr);           //obtain the array
-        for (int i = 0; i < a.length; i++) { //for loop to print the array
+        int[] a = r.runningSum(arr);
+        for (int i = 0; i < a.length; i++) {
             System.out.print(a[i] + " ");
         }
     }
