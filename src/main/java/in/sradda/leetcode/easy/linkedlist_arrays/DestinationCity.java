@@ -1,43 +1,43 @@
 package in.sradda.leetcode.easy.linkedlist_arrays;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
 
 public class DestinationCity {
-    public static void main(String[] args) {
-        DestinationCity des = new DestinationCity();
-        Scanner sc = new Scanner(System.in);
-        int m = sc.nextInt();
-        int n = sc.nextInt();
-        des.inputmat(m, n);
+    public static void main( String[] args ) {
+        DestinationCity obj = new DestinationCity();
+        Scanner scanner = new Scanner(System.in);
+        List<List<String>> listoflists = new ArrayList<List<String>>();
+        System.out.println("Enter no.of sublists");
+        int n= scanner.nextInt();
+        System.out.println("Enter length of sublist");;
+        int size = scanner.nextInt();
+        for(int i=0;i<n;i++){
+            System.out.println("Enter "+(i+1)+"th sublist elements");
+            List<String> list1 = new ArrayList<String>();
+            for(int j=0;j<size;j++){
+                list1.add(scanner.next());
+            }
+            listoflists.add(list1);
+        }
+        System.out.println(obj.destCity(listoflists));
     }
 
-    public void inputmat(int m1, int n1) {
-        Scanner sc = new Scanner(System.in);
-        String[][] matrix = new String[m1][n1];
-        for (int i = 0; i < m1; i++) {
-            for (int j = 0; j < n1; j++) {
-                matrix[i][j] = sc.next();
+
+    public String destCity(List<List<String>> paths) {
+        String start = paths.get(0).get(0);
+        String dest =  paths.get(0).get(1);
+        HashMap<String, String> hm = new HashMap<>();
+        for (List<String> list:paths) {
+
+            hm.put(list.get(0), list.get(1));
+        }
+        while(true){
+            if(hm.containsKey(dest)){
+                dest = hm.get(dest);
+            }
+            else {
+                return dest;
             }
         }
-        if (m1 == 0 || n1 == 0) {
-            throw new IllegalArgumentException("Null value not allowed");
-        }
-        System.out.println(destCity(matrix));
-
-    }
-
-     public String destCity(String[][] paths) {
-        Map<String,String> map = new HashMap<>();
-        String result = "";
-//        for(String[] list : paths)
-//            map.put(list.get(0),list.get(1));
-//        for(String[] list : paths){
-//            if(!map.containsKey(list.get(1)))
-//                result = list.get(1);
-//             }
-      return result;
     }
 }

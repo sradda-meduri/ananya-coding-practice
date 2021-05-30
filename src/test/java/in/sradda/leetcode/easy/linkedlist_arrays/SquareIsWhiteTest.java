@@ -27,6 +27,17 @@ class SquareIsWhiteTest {
 
     }
 
+    @Test
+    public void testcaseIllegalInput1(){
+        SquareIsWhite s = new SquareIsWhite();
+        String ans = null;
+        Throwable exception = Assertions.assertThrows(IllegalArgumentException.class,
+                () -> s.squareIsWhite(ans));
+        Assertions.assertEquals("null values are not accepted", exception.getMessage());
+
+
+    }
+
 
 
 
