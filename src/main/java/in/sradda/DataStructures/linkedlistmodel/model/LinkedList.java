@@ -98,6 +98,10 @@ public class LinkedList {
              ptr = ptr == null ? ptr:ptr.getNext();
              return result;
         }
-    }
 
+        public int value(){
+            int result = ptr.getValue();
+            return result;
+        }
+    }
 }
