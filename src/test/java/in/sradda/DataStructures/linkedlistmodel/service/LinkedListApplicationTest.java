@@ -60,4 +60,69 @@ class LinkedListApplicationTest {
         Assertions.assertEquals(iterator.next(),2);
         Assertions.assertEquals(list.deleteEnd(),true);
     }
+
+    @Test
+    public void testCaseInsertAtPosition(){
+        int[] arr = {1,2,3,4,5};
+        LinkedList list = new LinkedList();
+        for(int element : arr){
+            list.insertAtEnd(element);
+        }
+        list.insertAtPosition(2,100);
+        LinkedList.Iterator iterator = list.iterator();
+        Assertions.assertEquals(iterator.next(),1);
+        Assertions.assertEquals(list.insertAtPosition(2,100),true);
+    }
+
+    @Test
+    public void testCaseDeleteAtPosition(){
+        int[] arr = {1,2,3,4,5};
+        LinkedList list = new LinkedList();
+        for(int element : arr){
+            list.insertAtEnd(element);
+        }
+        list.deleteAtPosition(2);
+        Assertions.assertEquals(list.deleteAtPosition(2),true);
+    }
+
+    @Test
+    public void testCaseNodeExistence(){
+        int[] arr = {1,2,3,4,5};
+        LinkedList list = new LinkedList();
+        for(int element : arr){
+            list.insertAtEnd(element);
+        }
+        Assertions.assertEquals(list.nodeExistence(10),false);
+    }
+
+    @Test
+    public void testCaseSizeOfList(){
+        int[] arr = {1,2,3,4,5};
+        LinkedList list = new LinkedList();
+        for(int element : arr){
+            list.insertAtEnd(element);
+        }
+        Assertions.assertEquals(list.listSize(),5);
+    }
+
+    @Test
+    public void testCaseReverseList() {
+
+        int[] arr = {1, 2, 3, 4, 5};
+        LinkedList list = new LinkedList();
+        for (int element : arr) {
+            list.insertAtEnd(element);
+        }
+        list.reversingList();
+        LinkedList.Iterator iterator = list.iterator();
+        Assertions.assertEquals(iterator.hasNext(), true);
+        Assertions.assertEquals(iterator.next(), 5);
+        Assertions.assertEquals(iterator.next(), 4);
+        Assertions.assertEquals(iterator.next(), 3);
+        Assertions.assertEquals(iterator.next(), 2);
+        Assertions.assertEquals(iterator.next(), 1);
+
+    }
+
+
 }

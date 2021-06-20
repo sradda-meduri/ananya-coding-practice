@@ -19,6 +19,7 @@ public class LinkedList {
         }
      }
 
+
      public boolean deleteFront(){
         if(head.getNext()==null){
             head = null;
@@ -31,6 +32,8 @@ public class LinkedList {
         }
         return false;
      }
+
+
 
      public boolean deleteEnd(){
          if(head.getNext()==null){
@@ -47,6 +50,8 @@ public class LinkedList {
         return false;
      }
 
+
+
     public void insertAtEnd(int val) {
         LinkedListNode node = new LinkedListNode(val);
 
@@ -62,6 +67,102 @@ public class LinkedList {
         }
 
     }
+
+
+
+    public boolean insertAtPosition(int val, int pos){
+        LinkedListNode node = new LinkedListNode(val);
+        int count1=1;
+        LinkedListNode temp=head;
+        while(temp!=null){
+            count1=count1+1;
+            if((count1+1)==pos){
+                LinkedListNode temp1 = temp.getNext();
+                temp.setNext(node);
+                System.out.println(count1);
+                LinkedListNode temp2=temp.getNext();
+                temp2.setNext(temp1);
+                break;
+            }
+            temp=temp.getNext();
+        }
+        return true;
+    }
+
+
+
+    public boolean deleteAtPosition(int pos){
+        LinkedListNode temp = head;
+        int count1=0;
+        while(temp!=null){
+            count1=count1+1;
+            if((count1+1)==pos){
+                LinkedListNode temp1 = temp;
+                LinkedListNode temp2 = temp.getNext().getNext();
+                temp1.setNext(temp2);
+            }
+            temp=temp.getNext();
+        }
+        return true;
+    }
+
+
+
+    public boolean nodeExistence(int val){
+        LinkedListNode temp = head;
+        while(temp!=null){
+            if(temp.getValue()==val){
+                System.out.println("True : The given value is present in tha Linked List");
+            }
+            else{
+                temp=temp.getNext();
+            }
+        }
+        System.out.println("Value is not present");
+        return false;
+    }
+
+
+
+    public int listSize(){
+        int lsize=0;
+        LinkedListNode temp = head;
+        while(temp!=null){
+            lsize=lsize+1;
+            temp=temp.getNext();
+        }
+        return lsize;
+    }
+
+
+
+    public void printReverse(){
+        LinkedListNode temp = head;
+        reverseOrder(head);
+    }
+    public void reverseOrder(LinkedListNode head){
+        LinkedListNode temp = head;
+        if(temp==null){
+            return;
+        }
+        reverseOrder(temp.getNext());
+        System.out.println(temp.getValue() + " ");
+    }
+
+
+    public void reversingList(){
+        LinkedListNode prev = null;
+        LinkedListNode current = head;
+        LinkedListNode next = null;
+        while(current != null){
+            next = current.getNext();
+            current.setNext(prev);
+            prev=current;
+            current=next;
+        }
+        head = prev;
+    }
+
 
 
     public void print() {
