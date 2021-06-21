@@ -14,7 +14,7 @@ public class LinkedListApplication {
             list.insertAtEnd(element);
         }
 
-        System.out.println(list.deleteAtPosition(3));
+        System.out.println(list.insertAtPosition(100,20));
         list.print();
     }
 }

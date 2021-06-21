@@ -72,18 +72,25 @@ public class LinkedList {
 
     public boolean insertAtPosition(int val, int pos){
         LinkedListNode node = new LinkedListNode(val);
-        int count1=1;
-        LinkedListNode temp=head;
-        while(temp!=null){
-            count1=count1+1;
-            if((count1)==pos){
-                LinkedListNode temp1 = temp.getNext();
-                temp.setNext(node);
-                LinkedListNode temp2=temp.getNext();
-                temp2.setNext(temp1);
-                break;
+        int lsize=listSize();
+        if(pos>lsize){
+            System.out.println("position is greater than the length of linked list");
+            return false;
+        }
+        else {
+            int count1 = 1;
+            LinkedListNode temp = head;
+            while (temp != null) {
+                count1 = count1 + 1;
+                if ((count1) == pos) {
+                    LinkedListNode temp1 = temp.getNext();
+                    temp.setNext(node);
+                    LinkedListNode temp2 = temp.getNext();
+                    temp2.setNext(temp1);
+                    break;
+                }
+                temp = temp.getNext();
             }
-            temp=temp.getNext();
         }
         return true;
     }
