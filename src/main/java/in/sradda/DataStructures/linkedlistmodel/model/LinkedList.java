@@ -76,10 +76,9 @@ public class LinkedList {
         LinkedListNode temp=head;
         while(temp!=null){
             count1=count1+1;
-            if((count1+1)==pos){
+            if((count1)==pos){
                 LinkedListNode temp1 = temp.getNext();
                 temp.setNext(node);
-                System.out.println(count1);
                 LinkedListNode temp2=temp.getNext();
                 temp2.setNext(temp1);
                 break;
@@ -112,7 +111,8 @@ public class LinkedList {
         LinkedListNode temp = head;
         while(temp!=null){
             if(temp.getValue()==val){
-                System.out.println("True : The given value is present in tha Linked List");
+                System.out.println("Given value is present in tha Linked List "+val);
+                return true;
             }
             else{
                 temp=temp.getNext();

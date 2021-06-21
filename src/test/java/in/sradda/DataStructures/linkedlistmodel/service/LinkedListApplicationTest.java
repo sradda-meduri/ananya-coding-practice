@@ -68,10 +68,14 @@ class LinkedListApplicationTest {
         for(int element : arr){
             list.insertAtEnd(element);
         }
-        list.insertAtPosition(2,100);
         LinkedList.Iterator iterator = list.iterator();
-        Assertions.assertEquals(iterator.next(),1);
-        Assertions.assertEquals(list.insertAtPosition(2,100),true);
+        list.insertAtPosition(100,2);
+        Assertions.assertEquals(iterator.next(), 1);
+        Assertions.assertEquals(iterator.next(),100);
+        Assertions.assertEquals(iterator.next(), 2);
+        Assertions.assertEquals(iterator.next(), 3);
+        Assertions.assertEquals(iterator.next(), 4);
+        Assertions.assertEquals(iterator.next(), 5);
     }
 
     @Test
@@ -82,7 +86,11 @@ class LinkedListApplicationTest {
             list.insertAtEnd(element);
         }
         list.deleteAtPosition(2);
-        Assertions.assertEquals(list.deleteAtPosition(2),true);
+        LinkedList.Iterator iterator = list.iterator();
+        Assertions.assertEquals(iterator.next(), 1);
+        Assertions.assertEquals(iterator.next(), 3);
+        Assertions.assertEquals(iterator.next(), 4);
+        Assertions.assertEquals(iterator.next(), 5);
     }
 
     @Test
