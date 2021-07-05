@@ -1,9 +1,10 @@
-package in.sradda.SortingAlgorithms;
+package in.sradda.sorting_algorithms;
 
 public class CountingSort {
     public static void main(String[] args) {
 
         int[] intArray = { 2,5,9,8,2,7,10,4,3};
+        CountingSort cs = new CountingSort();
 
         countingSort(intArray , 1 ,10);
 
@@ -11,6 +12,7 @@ public class CountingSort {
             System.out.println(intArray[i]);
         }
     }
+
 
     public static void countingSort(int[] input , int min , int max){
 

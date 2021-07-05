@@ -1,4 +1,4 @@
-package in.sradda.SortingAlgorithms;
+package in.sradda.sorting_algorithms;
 
 public class RadixSort {
     public static void main(String[] args) {

@@ -1,9 +1,19 @@
-package in.sradda.SortingAlgorithms;
+package in.sradda.sorting_algorithms;
+
+import java.util.StringTokenizer;
 
 public class SelectionSort {
     public static void main(String[] args) {
 
         int[] intArray = { 20,35,55,-4,6,60};
+        SelectionSort ss = new SelectionSort();
+        int[] outputArray = ss.sorting(intArray);
+
+        for (int i=0 ; i< outputArray.length ; i++){
+            System.out.println(outputArray[i]);
+        }
+    }
+    public static int[] sorting(int[] intArray){
         for (int lastUnsortedIndex = intArray.length - 1;lastUnsortedIndex > 0 ; lastUnsortedIndex --){
             int largest = 0;
 
@@ -15,9 +25,7 @@ public class SelectionSort {
 
             swap(intArray , largest , lastUnsortedIndex);
         }
-        for (int i=0 ; i< intArray.length ; i++){
-            System.out.println(intArray[i]);
-        }
+        return intArray;
     }
 
     public static void swap(int[] array , int i, int j){
