@@ -3,7 +3,7 @@ package in.sradda.Udemy.double_linked_list;
 import in.sradda.Udemy.double_linked_list.Employee;
 import in.sradda.Udemy.double_linked_list.EmployeeNode;
 
-public class Employee_double_linked_list {
+public class Employeedoublelinkedlist {
     private EmployeeNode head;
     private EmployeeNode tail;
     private int size;
@@ -49,6 +49,25 @@ public class Employee_double_linked_list {
         size++;
 
         return true;
+    }
+
+    public EmployeeNode removeEmployee(Employee employee){
+        if(head == null){
+            return null;
+        }
+        EmployeeNode node = head;
+        while(node != null ){
+            if(node.getEmployee().equals(employee)){
+                EmployeeNode current = node.getPrevious();
+                EmployeeNode next = node.getNext();
+                current.setNext(next);
+                next.setPrevious(current);
+                node.setNext(null);
+                size--;
+            }
+            node=node.getNext();
+        }
+        return node;
     }
 
     public EmployeeNode removeFromFront() {
