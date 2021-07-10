@@ -129,6 +129,26 @@ public class LinkedList {
         return false;
     }
 
+    public void insertSorted(Integer value){
+
+        if(head == null || head.getValue() >=value){
+            insertAtBeginning(value);
+            return;
+        }
+
+        LinkedListNode current = head.getNext();
+        LinkedListNode previous = head;
+        while(current != null && current.getValue() < value){
+            previous = current;
+            current = current.getNext();
+        }
+
+        LinkedListNode newNode = new LinkedListNode(value);
+        newNode.setNext(current);
+        previous.setNext(newNode);
+
+    }
+
 
 
     public int listSize(){
