@@ -1,5 +1,8 @@
 package in.sradda.Udemy.single_linked_list;
 
+import in.sradda.DataStructures.linkedlistmodel.model.LinkedList;
+import in.sradda.DataStructures.linkedlistmodel.model.LinkedListNode;
+
 public class EmployeeLinkedList {
     private EmployeeNode head;
     private int size;
@@ -41,6 +44,33 @@ public class EmployeeLinkedList {
         }
         System.out.println("null");
     }
+
+//    public Iterator iterator(){
+//        return new Iterator(head);
+//    }
+//
+//    public class Iterator {
+//        private EmployeeNode ptr ;
+//
+//        public Iterator(EmployeeNode head){
+//            this.ptr = head;
+//        }
+//
+//        public boolean hasNext(){
+//            return ptr != null;
+//        }
+//
+//        public int next(){
+//            int result = ptr == null? -1 : ptr.getValue();
+//            ptr = ptr == null ? ptr:ptr.getNext();
+//            return result;
+//        }
+//
+//        public int value(){
+//            int result = ptr.getValue();
+//            return result;
+//        }
+//    }
 
 
 }
