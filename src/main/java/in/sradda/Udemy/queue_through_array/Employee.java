@@ -1,4 +1,4 @@
-package in.sradda.Udemy.Queue_through_array;
+package in.sradda.Udemy.queue_through_array;
 
 public class Employee {
     private String firstName;
@@ -63,5 +63,4 @@ public class Employee {
                 ", id=" + id +
                 '}';
     }
-
 }

@@ -1,4 +1,4 @@
-package in.sradda.Udemy.Queue_through_array;
+package in.sradda.Udemy.queue_through_array;
 
 public class Main {
     public static void main(String[] args) {
@@ -34,4 +34,3 @@ public class Main {
 
     }
 }
-

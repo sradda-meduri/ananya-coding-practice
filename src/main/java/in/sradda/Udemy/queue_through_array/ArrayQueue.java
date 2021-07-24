@@ -1,4 +1,4 @@
-package in.sradda.Udemy.Queue_through_array;
+package in.sradda.Udemy.queue_through_array;
 
 import java.util.NoSuchElementException;
 
